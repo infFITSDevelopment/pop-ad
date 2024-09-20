@@ -1,0 +1,504 @@
+:root {
+  --dark-primary-color: rgba(51, 51, 51, 1);
+  --light-primary-color: rgba(144, 144, 144, 1);
+  --light-background-color: rgba(245, 245, 245, 1);
+  --light-primary-color: rgba(255, 255, 255, 0.5);
+}
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.inf-panel-container {
+  background-image: url("./ts-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 2000px;
+}
+/* modal trigger button */
+.inf-panel-container .btn.btn-light.trigger-icon--shirt {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  background: #fff;
+  box-shadow: 0px 0.5px 5px 0px rgba(0, 0, 0, 0.25),
+    0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.inf-panel-container .btn-container {
+  margin: 0 15px;
+  border-radius: 100px;
+  border: 1px solid rgba(59, 59, 50, 0.18);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+.inf-panel-container button#guideBtn,
+.inf-panel-container button#AIbtn {
+  cursor: pointer;
+  padding: 10px 0;
+  width: 100%;
+  color: rgba(59, 59, 50, 0.5);
+  font-family: "Chocolate Classical Sans", "Figtree", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.inf-panel-container .btn-custom-size {
+  font-size: 14px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.inf-panel-container .btn.btn-white {
+  /* background-color: #ebebeb; */
+  background-color: var(--light-background-color);
+  border: 0cm;
+  font-weight: 400;
+  color: rgba(144, 144, 144, 1) !important;
+}
+
+.inf-panel-container .btn.btn-active {
+  background-color: var(--dark-primary-color) !important;
+  border: none;
+  z-index: 1060;
+  color: #f3f3ef !important;
+  font-family: "Chocolate Classical Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px; /* 135.714% */
+}
+
+/* .inf-panel-container .overlap-btn {
+  width: calc(50% + 15px);
+  z-index: 1;
+}
+
+.inf-panel-container .overlap-btn:first-child {
+  margin-right: -30px;
+} */
+
+.inf-panel-container .btn.overlap-btn:hover {
+  z-index: 1070;
+  /* background-color: rgb(184, 184, 184); */
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  /* color: #6a675d; */
+}
+
+.inf-panel-container #info-content {
+  padding: 0 18px;
+  max-height: 85vh;
+}
+
+.inf-panel-container .accordion-button.collapsed, .accordion-button:not(.collapsed) {
+  background: transparent;
+  border-bottom: none;
+}
+.inf-panel-container .accordion-item,
+.inf-panel-container .accordion-button{
+  background-color:transparent !important;
+}
+.inf-panel-container .accordion-header {
+  padding: 21px 0;
+}
+/* accordion */
+.inf-panel-container .accordion-button {
+  padding: 0;
+  font-size: 14px;
+  color: #333;
+  font-family: "Noto Sans TC", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px; /* 135.714% */
+}
+
+.inf-panel-container .accordion-button.collapsed,
+.inf-panel-container .accordion-button:not(.collapsed) {
+  background: #fff;
+  border-bottom: 1px solid var(--light-primary-color);
+}
+
+.inf-panel-container .accordion-button,
+.inf-panel-container .accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.inf-panel-container .accordion-button.collapsed:not(:last-child) {
+  border-color: var(--light-primary-color);
+}
+
+/* .accordion-button::after {
+
+} */
+
+.inf-panel-container .accordion-button:not(.collapsed)::after {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  background-image: url("https://raw.githubusercontent.com/infFITSDevelopment/pop-ad/refs/heads/main/more.svg");
+  background-size: auto;
+  background-position: center;
+}
+.inf-panel-container .accordion-button.collapsed::after {
+  background-image: url("https://raw.githubusercontent.com/infFITSDevelopment/pop-ad/refs/heads/main/more.svg");
+  background-size: auto;
+  background-position: center;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.inf-panel-container div.accordion-body {
+  padding: 8px;
+}
+
+.inf-panel-container #modalSizeInfo{
+  max-width: 100%;
+  overflow-x: auto;
+}
+/* table */
+.inf-panel-container table {
+  text-align: center;
+  width: 100%;
+  border-collapse: separate;
+  color: #000;
+  font-family: "Chocolate Classical Sans", "Figtree", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.inf-panel-container .size-table thead th {
+  font-weight: 400;
+  text-wrap: nowrap;
+}
+
+.inf-panel-container .size-table tr {
+  display: block;
+}
+.inf-panel-container .size-table thead tr {
+  border: none;
+}
+.inf-panel-container .size-table tbody tr{
+  margin-bottom:6px;
+}
+.inf-panel-container th,
+.inf-panel-container td {
+  width: 100px;
+  padding:12px 18px;
+}
+
+.inf-panel-container .size-table thead th {
+  position: sticky;
+  /* background: #fff; */
+  top: 0;
+  z-index: 2; /* 保證表頭高於內容 */
+}
+
+.inf-panel-container .size-table tbody td:first-child,
+.inf-panel-container .size-table thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 99;
+  /*保證左邊第一列高於其它列*/transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+}
+
+.inf-panel-container .size-btn {
+  cursor: pointer;
+  color: rgba(144, 144, 144, 1);
+}
+
+.inf-panel-container .size-btn:hover {
+  color: rgba(144, 144, 144, 0.75);
+}
+.inf-panel-container .size-btn:not(.selected){
+  border-radius: 13px;
+  border: 1px solid var(--black-143-b-3-b-3214, rgba(59, 59, 50, 0.14));
+  background: #FFF;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+}
+.inf-panel-container .size-btn.selected {
+  color: #000;
+  font-weight: 500;
+  border: 1px solid #3B3B32;
+  background: #F3F3EF;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+}
+.inf-panel-container .size-btn.selected:hover {
+  color: rgba(51, 51, 51, 0.75);
+}
+
+/* .size-btn.selected td:first-child {
+  background-color: rgba(240, 240, 240, 1);
+} */
+
+.inf-panel-container .modal-right-top {
+  display: block;
+  position: absolute;
+  top: 2vh;
+  right: 1vw;
+  max-width: 100vw;
+  width: 400px;
+  height: 95vh;
+  margin: 0px;
+  padding: 20px;
+  z-index: 1050;
+  background-color: white;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+  transform: translateX(0%);
+  transition: transform 350ms ease;
+  -webkit-transition: transform 350ms ease;
+  -moz-transition: transform 350ms ease;
+  -ms-transition: transform 350ms ease;
+  -o-transition: transform 350ms ease;
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+}
+
+.inf-panel-container #panel-content.offcanvas-body {
+  padding: 18px 0;
+}
+.offcanvas-backdrop.show {
+  opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+.inf-panel-container .offcanvas.offcanvas-bottom {
+  height: 80vh !important;
+  margin: 0 auto;
+  max-width: 90vw;
+  position: fixed;
+  top: 10vh;
+  z-index: 99999;
+}
+.inf-panel-container .offcanvas-bottom.main-modal,
+.inf-panel-container .offcanvas-end.main-modal {
+  /*box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 10px;
+  */border-radius: 21px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(38px);
+  -webkit-backdrop-filter: blur(38px);
+  -webkit-border-radius: 21px;
+  -moz-border-radius: 21px;
+  -ms-border-radius: 21px;
+  -o-border-radius: 21px;
+}
+.inf-panel-container .offcanvas-end.main-modal {
+  margin: 20px;
+  width: 400px;
+}
+
+.inf-panel-container #svg_size--panel,
+.inf-panel-container #svg_unit {
+  color: var(--dark-primary-color);
+}
+.inf-panel-container #svg_size--panel {
+  padding-bottom: 40px;
+}
+.inf-panel-container #svg_unit {
+  font-size: 12px;
+}
+
+.inf-panel-container #TryonTable-container {
+  width: 100%;
+  border: 1px solid rgba(185, 185, 185, 1);
+  border-radius: 5px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.inf-panel-container #modalFilterInfo .filter-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: scroll;
+}
+
+.inf-panel-container #modalFilterInfo .filter-button {
+  margin-left: 0.25em;
+  padding: 4px 12px;
+  border: none;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  -moz-transition: background-color 0.3s, color 0.3s;
+  -ms-transition: background-color 0.3s, color 0.3s;
+  -o-transition: background-color 0.3s, color 0.3s;
+}
+
+.inf-panel-container #modalFilterInfo .filter-button:hover {
+  background-color: #ddd;
+}
+
+.inf-panel-container #modalFilterInfo .filter-button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.inf-panel-container #modalFilterInfo table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: scroll;
+}
+
+.inf-panel-container #modalFilterInfo th,
+.inf-panel-container #modalFilterInfo td {
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 10px;
+  text-align: center;
+  color: rgba(51, 51, 51, 1);
+  border: 0.5px solid rgba(185, 185, 185, 1);
+}
+
+.inf-panel-container #modalFilterInfo th {
+  color: rgba(51, 51, 51, 1);
+  font-weight: 400;
+  background-color: rgba(240, 240, 240, 1);
+}
+
+/* modalAttributeInfo */
+.inf-panel-container #modalAttributeInfo {
+  border: 1px solid rgba(185, 185, 185, 1);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.inf-panel-container #modalAttributeInfo table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.inf-panel-container #modalAttributeInfo th,
+.inf-panel-container #modalAttributeInfo td {
+  padding: 10px;
+  text-align: center;
+  color: rgba(51, 51, 51, 1);
+}
+
+.inf-panel-container #modalAttributeInfo th {
+  border: 1px solid #ddd;
+  background-color: #f2f2f2;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.inf-panel-container #modalAttributeInfo .checkmark {
+  font-size: 18px;
+  color: black !important;
+}
+
+.inf-panel-container #modalAttributeInfo td > span {
+  text-align: center;
+  width: fit-content;
+  box-sizing: border-box;
+  padding: 0px 12px;
+  font-weight: 400;
+  color: rgba(144, 144, 144, 1);
+}
+.inf-panel-container #modalAttributeInfo td.active > span {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background-color: var(--dark-primary-color);
+  /* border: 1px solid var(--dark-primary-color); */
+  color: rgba(240, 240, 240, 1);
+}
+.inf-panel-container #modalAttributeInfo tr:not(:last-child) {
+  background: radial-gradient(
+      circle at bottom,
+      rgba(144, 144, 144, 1) 1px,
+      transparent 1px
+    )
+    repeat-x bottom;
+  background-size: 5px 4px;
+}
+
+.inf-panel-container rect{
+  fill: #333;
+}
+.inf-panel-container text{
+  fill:#fff;
+}
+.inf-panel-container .accordion-flush>.accordion-item>.accordion-header .accordion-button{
+  box-shadow: none;;
+}
+.inf-panel-container .accordion-button:not(.collapsed) {
+  color: #333;
+  font-family: "Noto Sans TC";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+}
