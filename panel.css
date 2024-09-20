@@ -4,18 +4,6 @@
   --light-background-color: rgba(245, 245, 245, 1);
   --light-primary-color: rgba(255, 255, 255, 0.5);
 }
-body {
-  font-family: "Noto Sans TC", sans-serif;
-}
-
-.inf-panel-container {
-  background-image: url("./ts-bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 2000px;
-}
 /* modal trigger button */
 .inf-panel-container .btn.btn-light.trigger-icon--shirt {
   position: fixed;
